@@ -3,8 +3,9 @@
 	"version": "0.0.1",
 	"description": "An FCC Backend Challenge",
 	"main": "server.js",
+	"author": "Muhammad Abdullah",
 	"scripts": {
-		"start": "nodemon server.js"
+		"start": "node server.js"
 	},
 	"dependencies": {
 		"cors": "^2.8.0",
@@ -13,7 +14,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://githost.com/camper/repo.git"
+		"url": "https://github.com/Muhammad-Abdullah012/free-code-camp-challenge0.git"
 	},
 	"keywords": [
 		"node",
