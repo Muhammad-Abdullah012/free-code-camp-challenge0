@@ -23,6 +23,11 @@ app.get("/", (req, res) => {
 
 
 // your first API endpoint... 
+app.get("/api/", (req,res) => {
+  let d = new Date();
+  res.json({"unix": d.getTime(), "utc": d.toUTCString() });
+});
+
 app.get("/api/:date", (req,res,next) => {
   let pattern = /\D/g;
   let result = null;
@@ -40,6 +45,9 @@ app.get("/api/:date", (req,res,next) => {
   else {
     d = new Date();
     d.setTime(req.params.time);
+  }
+  if(! d.getTime()) {
+    res.json({error: "Invalid Date"});
   }
   res.json({"unix": d.getTime(), "utc": d.toUTCString() });
 });
